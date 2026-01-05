@@ -2,9 +2,9 @@
 Express js is a nvm package
 ## MVC 
 learned about Model-View-Controller**, the blueprint for organized apps.
-1 **Model (Kitchen):** Handles the data (Database).
-2 **View (Platter):** What the user sees (JSON or HTML).
-3 **Controller (Waiter):** The logic that connects the user to the data.
+1. **Model :** Handles the data (Database).
+2. **View :** What the user sees (JSON or HTML).
+3. **Controller :** The logic that connects the user to the data.
 
 ##  express.js vs Node HTTP
 Why switched to Express:
