@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 
-// --- MIDDLEWARE 1
-// This runs for EVERY request because we used app.use()
+//  MIDDLEWARE 1
+// This runs for every request because we used app.use()
 function myLogger(req, res, next) {
     console.log(`  Someone visited ${req.url} at ${new Date().toISOString()}`);
     next(); 
@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
     res.send("Home Page ");
 });
 
-// Protected Route (Has the checkAge Guard)
+// Protected Route
 // we put the middleware in the middle
 app.get('/dashboard', checkAge, (req, res) => {
     res.send(" Welcome to the Dashboard. Here is the data.");
