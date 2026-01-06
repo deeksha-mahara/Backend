@@ -1,7 +1,7 @@
 #  Day 4: Middleware, POST Requests.
 
-## 1. Middleware: The Gatekeepers
-Middleware functions are the "Traffic Police" of Express. They sit between the incoming request and the final route handler.
+## 1. Middleware
+Middleware functions are the sit between the incoming request and the final route handler.
 
 ### The Chain of Command
 * **Request** → **Middleware 1** (Logger) → **Middleware 2** (Auth) → **Route Handler** (Response).
@@ -15,7 +15,7 @@ Middleware functions are the "Traffic Police" of Express. They sit between the i
     * Secure? More than GET, but still needs HTTPS to be truly safe.
 
 ##  3. The Body Parser (express.json)
-**The Problem:** Node.js receives data as a **raw stream** (bits and bytes). It doesn't know if it's text, video, or JSON.
+**The Problem:** Node.js receives data as a raw stream(bits and bytes). It doesn't know if it's text, video, or JSON.
 **The Fix:** app.use(express.json())
 * It intercepts the raw stream.
 * Collects all chunks.
