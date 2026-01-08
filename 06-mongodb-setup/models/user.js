@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// 1. Define the Schema (The Rules)
+// 1. defining schema 
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -21,5 +21,5 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-// 2. Export the Model
+// exporting model
 module.exports = mongoose.model('User', userSchema);
