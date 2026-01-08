@@ -21,5 +21,5 @@ Middleware functions are the "Traffic Police" of Express. They sit between the i
 * Collects all chunks.
 * Parses them into a JavaScript Object.
 * Attaches the result to req.body.
-* *Without this line, req.body is undefined.*
+* Without this line, req.body is undefined.
 

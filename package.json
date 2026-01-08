@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/deeksha-mahara/Backend#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongoose": "^9.1.2",
+    "zod": "^4.3.5"
   }
 }

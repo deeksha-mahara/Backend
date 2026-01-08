@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
                 res.writeHead(500);
                 res.end('Error loading file');
             } else {
-                res.writeHead(200, { 'Content-Type': 'text/html' }); 
+                res.writeHead(200, { 'Content-Type': 'text/html' }); (//telling browser this is html file)
                 res.end(data);
             }
         });
