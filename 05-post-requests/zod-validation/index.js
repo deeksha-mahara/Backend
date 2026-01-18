@@ -9,18 +9,17 @@ const registerSchema = zod.object({
     username: zod.string().min(3, "Username must be at least 3 characters long"),
     email: zod.string().email("Invalid email address format"),
     password: zod.string().min(8, "Password must be at least 8 characters"),
-    age: zod.number().min(18, "You must be 18 or older").optional() // This field is optional
+    age: zod.number().min(18, "You must be 18 or older").optional() 
 });
 
 app.post('/register', (req, res) => {
     const userData = req.body;
 
-    // We ask Zod Does this userData follow the rules
+    // ask Zod Does this userData follow the rules
     const result = registerSchema.safeParse(userData);
 
     // Handle the Result
     if (!result.success) {
-        // If it failed, send the specific error message back to the user
         return res.status(400).json({
             message: "Input Validation Failed ",
             errors: result.error.issues
